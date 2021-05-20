@@ -13,6 +13,7 @@ int main(){
 	
 	}
 	else if( x==2){
+		int n,m=1;
 		int n = get_int("Enter the number of rows");
 		for(int i=n;i>=1;i++){
 			for(int j=1;j<=1;j++){
