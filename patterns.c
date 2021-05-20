@@ -7,7 +7,7 @@ int main(void){
 	if (x ==1){
 		while(n != 0){
 			for(int i=0; i<n; i++){
-				printf("\n#");
+				printf("#");
 			}
 			printf("\n");
 			n--;
