@@ -6,7 +6,8 @@ int main(void){
 	int n = get_int("Enter the number of rows");
 	if (x ==1){
 		
-		when(n != 0){
+		when(n != 0);
+		{
 			for(int i=0; i<n; i++){
 				printf("#");
 			}
