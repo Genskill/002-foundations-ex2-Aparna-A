@@ -1,30 +1,43 @@
-#include<stdio.h>
-#include<cs50.h>
-
-int main(void){
-	int x = get_int(" ");
-	int n = get_int(" ");
-		if (x ==1){
-			while(n != 0){
-				for(int i=0; i<n; i++){
-					printf("#");
-				}
-				printf("\n");
-				n--;
-			}
-	
-	}
-	else if( x==2){
-	for(int i=1;i<=n;i++){
-		for(int j=1;j<=n-i;j++){
-			printf(" ");
-		}
-		for(int k=1; k<=i; k++){
-			printf("#");
-		}
-		printf("\n");
-		}
-	}
-	return 0;
+#include <stdio.h>
+#include <cs50.h>
+int main(void)
+{
+    int typepattern;
+    int rows;
+    int i;
+    int j;
+    int k;
+    typepattern = get_int("");
+    rows = get_int("");
+    if (typepattern == 1)
+    {
+        for (i=rows; i>=1; i--)
+        {
+            for (j=1; j<=i; j++)
+            {
+                printf("#");
+            }
+            printf("\n");
+        }
+    }
+    else if (typepattern == 2)
+    {
+        for (i=rows; i>=1; i--)
+        {
+            for (j=1; j<=i-1; j++)
+            {
+                printf(" ");
+            }
+            for (k=rows; k>=i; k--)
+            {
+                printf("#");
+            }
+            printf("\n");
+        }
+    }
+    else
+    {
+        printf("Enter a valid number");
+    }
 }
 
