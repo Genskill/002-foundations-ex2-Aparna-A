@@ -1,9 +1,9 @@
 #include<stdio.h>
 #include<cs50.h>
 int main(){
-	int x = get_int("Enter type of pattern");
+	int x = get_int("Enter type of pattern(1 or 2)");
+	int n = get_int("Enter the number of rows");
 	if (x ==1){
-		int n = get_int("Enter the number of rows: ");
 		for(int i=n;i>=1;i--){
 			for(int j=1;j<=1;j++){
 				printf("#");
@@ -13,18 +13,15 @@ int main(){
 	
 	}
 	else if( x==2){
-		int n,m=1;
-		int n = get_int("Enter the number of rows");
-		for(int i=n;i>=1;i++){
-			for(int j=1;j<=1;j++){
+		for(int i=1;i<=n;i++){
+			for(int j=1;j<=n-i;j++){
 				printf(" ");
 			}
-			for(int k=1;k<=m;k++){
+			for(int k=1;k<=i;k++){
 				printf("#");
 				
 			}
 			printf("\n");
-			m++;
 		}
 	}
 	return 0;
